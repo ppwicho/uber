@@ -1,16 +1,22 @@
 class Main{
     public static void main(String[] args) {
         System.out.println("hola mundo");
-        Car car = new Car("AMQ123", new Account("Andres Vino","AMQ123")); //El objeto ya tiene vida
-        car.passenger=4;
-        System.out.println("Car Licence"+car.license);
+        UberX uberX = new UberX("AMQ123", new Account("Andres Vino","AMQ123"),"Chevrolet","Sonic"); //El objeto ya tiene vida
+        //uberX.passenger=3;
+        uberX.setPassenger(4);
+        uberX.printDataCar();
 
-        Car car2 = new Car("OAO456",new Account("Susanita Blanca", "OAO456"));
-        car2.passenger=3;
-        System.out.println("Car Licence"+car2.license);
+        UberVan uberVan = new UberVan("VAN123",new Account("name", "document"));
+        uberVan.setPassenger(6);
+        uberVan.printDataCar();
+        //System.out.println("Car Licence"+car.license);
 
-        car.printDataCar();
-        car2.printDataCar();
+       // Car car2 = new Car("OAO456",new Account("Susanita Blanca", "OAO456"));
+        //car2.passenger=3;
+        //System.out.println("Car Licence"+car2.license);
+
+        
+        //car2.printDataCar();
         
     }
 }
